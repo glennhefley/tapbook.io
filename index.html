@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-common.css" rel="stylesheet" />
+
+
+    <title>Close Enough Never to Hear</title>
+
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+
+</head>
+
+<!--
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+-->
+
+<body class="impress-not-supported" background="#ffffff">
+
+    <!--
+                                        For example this fallback message is only visible when there is `impress-not-supported` class on body.
+                                    -->
+    <div class="fallback-message">
+        <p>
+            Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+        </p>
+    </div>
+
+    <!--
+                                  -->
+    <div id="impress" data-transition-duration="1000" data-width="1024" data-height="768" data-max-scale="3" data-min-scale="0" data-perspective="1000" data-autoplay="5">
+
+
+        <div id="title" class="step" data-x="0" data-y="40" data-scale="2">
+
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        When you finish someone's sentences long enough, you get to know what they're going to say
+                    </p>
+                </div>
+
+            </div>
+
+    </div>
+
+    <!--
+This element introduces rotation.
+Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+ element should be rotated by 90 degrees clockwise.
+ -->
+    <div id="its" class="step" data-x="850" data-y="3000" data-z="-1600" data-rotate="60" data-scale="1">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    ... and you learn all the words they're {never} going to say
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    You learn the ticks, and the pauses, and the sounds they use to hide the feels they <em>cannot</em> say
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+      <div id="never" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    ...and all the {{<em>feels</em>}} they will have, which words can never say.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="enough" class="step" data-x="3500" data-y="-1850" data-z="1000" data-rotate="170" data-scale="2">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    You finish someone's sentences long enough...
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="hear" class="step" data-x="6700" data-y="-300" data-scale="4">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    ... you never hear them any more
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">
+
+
+    </div>
+
+    </div>
+
+    <!--
+                                        This is a UI plugin. You can read more about plugins in src/plugins/README.md.
+                                        For now, I'll just tell you that this adds some graphical controls to navigate the
+                                        presentation. In the CSS file you can style them as you want. We've put them bottom right.
+                                    -->
+    <div id="impress-toolbar"></div>
+
+    <div class="hint">
+        <p>
+            Use a spacebar or arrow keys to navigate. <br /> Press 'P' to launch speaker console.
+        </p>
+    </div>
+
+    <script>
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+   <!-- and NLP javascript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nlp_compromise/6.5.5/nlp_compromise.min.js"></script>
+   <!-- and NLP javascript library -->
+   
+    
+    <script>
+        impress().init();
+    </script>
+
+
+
+</body>
+
+</html>
